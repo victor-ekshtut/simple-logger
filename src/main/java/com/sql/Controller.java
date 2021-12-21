@@ -6,8 +6,7 @@ import java.sql.SQLException;
 
 import javax.sql.DataSource;
 
-public class Controller {
-  
+public class Controller {  
   public void unsafeFindAccountsByCustomerId(String customerId) throws SQLException {
     DataSource dataSource = null;
     
@@ -20,5 +19,19 @@ public class Controller {
     Connection c = dataSource.getConnection();
     @SuppressWarnings("unused")
     ResultSet rs = c.createStatement().executeQuery(sql);
-}
+  }
+  
+  public void unsafeFindProductsByCustomerId(String customerId) throws SQLException {
+    DataSource dataSource = null;
+    
+    String sql = "select "
+      + "product_id,acc_number,branch_id,balance "
+      + "from Products where customer_id = '"
+      + customerId 
+      + "'";
+    @SuppressWarnings("null")
+    Connection c = dataSource.getConnection();
+    @SuppressWarnings("unused")
+    ResultSet rs = c.createStatement().executeQuery(sql);
+  }
 }
