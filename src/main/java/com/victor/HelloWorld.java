@@ -1,7 +1,7 @@
 package com.victor;
 
+import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.apache.log4j.Priority;
 
 public class HelloWorld {
 
@@ -9,7 +9,7 @@ public class HelloWorld {
     Logger logger = Logger.getLogger("test");
     
     System.out.println("Hello, World! The current time is test " + System.currentTimeMillis());
-    logger.log(Priority.DEBUG, "Writing to logger");
+    logger.log(Level.INFO, "Writing to logger");
   }
 
 }
