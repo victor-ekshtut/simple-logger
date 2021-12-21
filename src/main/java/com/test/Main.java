@@ -1,9 +1,9 @@
-package com.victor;
+package com.test;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
-public class HelloWorld {
+public class Main {
 
   public static void main(final String[] args) {
     Logger logger = Logger.getLogger("test");
