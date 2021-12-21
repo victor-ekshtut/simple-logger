@@ -25,4 +25,4 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Run
-      run: java -cp target/helloworld-1.0.jar com.victor.helloworld.HelloWord
+      run: java -cp /home/runner/work/simple-logger/simple-logger/target/helloworld-1.0.jar com.victor.helloworld.HelloWord
