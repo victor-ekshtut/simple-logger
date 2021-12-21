@@ -22,6 +22,7 @@ public class Controller {
   }
   
   public void unsafeFindProductsByCustomerId(String customerId) throws SQLException {
+    //method 2
     DataSource dataSource = null;
     
     String sql = "select "
