@@ -22,7 +22,7 @@ public class Controller {
   }
   
   public void unsafeFindProductsByCustomerId(String customerId) throws SQLException {
-    //method 2
+    //method 2, trivial change
     DataSource dataSource = null;
     
     String sql = "select "
